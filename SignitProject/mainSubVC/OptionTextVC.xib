@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OptionTextVC" customModule="SignitProject" customModuleProvider="target">
+            <connections>
+                <outlet property="btnTest" destination="PM0-nq-ugL" id="gS8-Vu-Wvm"/>
+                <outlet property="textSizeSlider" destination="XAP-Hw-VjL" id="0Zc-rt-Dp2"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="SiD-cD-yNa"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="130"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mWL-h6-jAv">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="130"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OpC-t8-WWV">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
+                            <subviews>
+                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="1" maxValue="6" minimumValueImage="textSizeMin" maximumValueImage="textSizeMax" translatesAutoresizingMaskIntoConstraints="NO" id="XAP-Hw-VjL">
+                                    <rect key="frame" x="24" y="18" width="272" height="31"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="268" id="EKY-iz-J3G"/>
+                                    </constraints>
+                                    <color key="minimumTrackTintColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="maximumTrackTintColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <connections>
+                                        <action selector="sizeSliderChange:" destination="-1" eventType="valueChanged" id="cq9-0a-jOf"/>
+                                    </connections>
+                                </slider>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="OpC-t8-WWV" secondAttribute="height" multiplier="64:13" id="ib2-IH-dPd"/>
+                                <constraint firstItem="XAP-Hw-VjL" firstAttribute="centerY" secondItem="OpC-t8-WWV" secondAttribute="centerY" id="rTy-Gy-bhN"/>
+                                <constraint firstItem="XAP-Hw-VjL" firstAttribute="centerX" secondItem="OpC-t8-WWV" secondAttribute="centerX" id="tvK-8l-nf0"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zQa-3X-D1v">
+                            <rect key="frame" x="0.0" y="65" width="320" height="65"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PM0-nq-ugL">
+                                    <rect key="frame" x="137" y="17" width="46" height="30"/>
+                                    <state key="normal" title="Button"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="PM0-nq-ugL" firstAttribute="centerY" secondItem="zQa-3X-D1v" secondAttribute="centerY" id="Axw-Yw-qkT"/>
+                                <constraint firstItem="PM0-nq-ugL" firstAttribute="centerX" secondItem="zQa-3X-D1v" secondAttribute="centerX" id="O0g-BP-JwP"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="zQa-3X-D1v" secondAttribute="bottom" id="16j-ww-PQq"/>
+                        <constraint firstItem="zQa-3X-D1v" firstAttribute="top" secondItem="OpC-t8-WWV" secondAttribute="bottom" id="B8p-DE-OdE"/>
+                        <constraint firstItem="OpC-t8-WWV" firstAttribute="leading" secondItem="mWL-h6-jAv" secondAttribute="leading" id="Ca3-eo-4Uh"/>
+                        <constraint firstAttribute="trailing" secondItem="OpC-t8-WWV" secondAttribute="trailing" id="R2c-Mn-vI3"/>
+                        <constraint firstItem="zQa-3X-D1v" firstAttribute="leading" secondItem="mWL-h6-jAv" secondAttribute="leading" id="Tsq-Vu-oOC"/>
+                        <constraint firstItem="zQa-3X-D1v" firstAttribute="top" secondItem="OpC-t8-WWV" secondAttribute="bottom" id="fDb-SM-dmR"/>
+                        <constraint firstItem="OpC-t8-WWV" firstAttribute="top" secondItem="mWL-h6-jAv" secondAttribute="top" id="fMS-up-dot"/>
+                        <constraint firstAttribute="trailing" secondItem="zQa-3X-D1v" secondAttribute="trailing" id="zip-P9-kp3"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="mWL-h6-jAv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="5gA-xf-0zo"/>
+                <constraint firstItem="mWL-h6-jAv" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" id="POB-E0-RdQ"/>
+                <constraint firstAttribute="bottom" secondItem="mWL-h6-jAv" secondAttribute="bottom" id="eco-De-fbe"/>
+                <constraint firstItem="mWL-h6-jAv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="p5f-nZ-hv4"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="textSizeMax" width="14" height="15"/>
+        <image name="textSizeMin" width="10" height="10"/>
+    </resources>
+</document>

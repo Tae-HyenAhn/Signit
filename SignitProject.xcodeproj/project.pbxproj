@@ -1,0 +1,619 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2411A00A2033F4D30050C5C5 /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2411A0092033F4D30050C5C5 /* images.xcassets */; };
+		241BB951202D77F6009CAB94 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241BB950202D77F6009CAB94 /* EditViewController.swift */; };
+		243A897D204009C40029A0F3 /* OptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243A897C204009C40029A0F3 /* OptionViewController.swift */; };
+		244EF9CE202C618A00762728 /* PickAndEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 244EF9CD202C618A00762728 /* PickAndEdit.storyboard */; };
+		244EF9D0202C633800762728 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244EF9CF202C633800762728 /* PickerViewController.swift */; };
+		245D88FF202ACA8700926272 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245D88FE202ACA8700926272 /* AppDelegate.swift */; };
+		245D8901202ACA8700926272 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245D8900202ACA8700926272 /* ViewController.swift */; };
+		245D8904202ACA8700926272 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 245D8902202ACA8700926272 /* Main.storyboard */; };
+		245D8907202ACA8700926272 /* SignitProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 245D8905202ACA8700926272 /* SignitProject.xcdatamodeld */; };
+		245D8909202ACA8700926272 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 245D8908202ACA8700926272 /* Assets.xcassets */; };
+		245D890C202ACA8700926272 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 245D890A202ACA8700926272 /* LaunchScreen.storyboard */; };
+		245D8915202ADFDB00926272 /* desyrel.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 245D8914202ADFDB00926272 /* desyrel.ttf */; };
+		245D8919202AE23100926272 /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 245D8916202AE23100926272 /* SF-Pro-Text-Bold.otf */; };
+		245D891A202AE23100926272 /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 245D8917202AE23100926272 /* SF-Pro-Text-Regular.otf */; };
+		245D891B202AE23100926272 /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 245D8918202AE23100926272 /* SF-Pro-Display-Bold.otf */; };
+		24776876203BE6FC00A4AE13 /* SignitTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24776875203BE6FC00A4AE13 /* SignitTabVC.swift */; };
+		248036DF204BD5020050EC81 /* OptionWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248036DE204BD5020050EC81 /* OptionWebView.swift */; };
+		2484AA1E203E8A0F004D2BFB /* OptionChangeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2484AA1D203E8A0F004D2BFB /* OptionChangeProtocol.swift */; };
+		249715A2203BE80E00CB84AA /* EditTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249715A1203BE80E00CB84AA /* EditTabVC.swift */; };
+		249715A4203BF3B600CB84AA /* OptionTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249715A3203BF3B600CB84AA /* OptionTabVC.swift */; };
+		249715A6203BF41C00CB84AA /* TransformTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249715A5203BF41C00CB84AA /* TransformTabVC.swift */; };
+		249715AB203BFE1800CB84AA /* CustomTextSizeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249715AA203BFE1800CB84AA /* CustomTextSizeSlider.swift */; };
+		24A1F2F9203ECEEE00800820 /* RotateChangeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1F2F8203ECEEE00800820 /* RotateChangeProtocol.swift */; };
+		24A41CBC204D2AB600AF0E94 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A41CBB204D2AB600AF0E94 /* ToastView.swift */; };
+		24BD7FE82043C49400BC48B5 /* SF-Pro-Text-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 24BD7FE72043C49300BC48B5 /* SF-Pro-Text-Light.otf */; };
+		24BD7FEA2043F23600BC48B5 /* SignitBtnClickProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BD7FE92043F23600BC48B5 /* SignitBtnClickProtocol.swift */; };
+		24C317002058F16A00ECF121 /* DoneProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C316FF2058F16A00ECF121 /* DoneProtocol.swift */; };
+		24C317022058F87800ECF121 /* BlowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C317012058F87800ECF121 /* BlowVC.swift */; };
+		24C317042058FAC100ECF121 /* CircularTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C317032058FAC100ECF121 /* CircularTransition.swift */; };
+		24DD3354204518D900A799D5 /* CompleteTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DD3353204518D900A799D5 /* CompleteTabVC.swift */; };
+		24DD335620451D1800A799D5 /* CompleteClickProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DD335520451D1800A799D5 /* CompleteClickProtocol.swift */; };
+		24ED66C0205651C200FCD85B /* DescVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24ED66BF205651C200FCD85B /* DescVC.swift */; };
+		24ED66C220565D3500FCD85B /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 24ED66C120565D3500FCD85B /* SF-Pro-Display-Regular.otf */; };
+		24FB4D5A205B964E0046702D /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24FB4D58205B964E0046702D /* Fabric.framework */; };
+		24FB4D5B205B964E0046702D /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24FB4D59205B964E0046702D /* Crashlytics.framework */; };
+		24FB4D5D205B99E30046702D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24FB4D5C205B99E20046702D /* GoogleService-Info.plist */; };
+		B35A1BFF03B6CEF1FAD4B101 /* Pods_SignitProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30B93AF3C6EA92BF31E47BA8 /* Pods_SignitProject.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1624B1AD8C1E58FAA7DF5FB4 /* Pods-SignitProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignitProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-SignitProject/Pods-SignitProject.release.xcconfig"; sourceTree = "<group>"; };
+		2411A0092033F4D30050C5C5 /* images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = images.xcassets; sourceTree = "<group>"; };
+		241BB950202D77F6009CAB94 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		243A897C204009C40029A0F3 /* OptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionViewController.swift; sourceTree = "<group>"; };
+		244EF9CD202C618A00762728 /* PickAndEdit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PickAndEdit.storyboard; sourceTree = "<group>"; };
+		244EF9CF202C633800762728 /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
+		245D88FB202ACA8700926272 /* SignitProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignitProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		245D88FE202ACA8700926272 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		245D8900202ACA8700926272 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		245D8903202ACA8700926272 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		245D8906202ACA8700926272 /* SignitProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SignitProject.xcdatamodel; sourceTree = "<group>"; };
+		245D8908202ACA8700926272 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		245D890B202ACA8700926272 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		245D890D202ACA8700926272 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		245D8914202ADFDB00926272 /* desyrel.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = desyrel.ttf; path = ../../../../desyrel/desyrel.ttf; sourceTree = "<group>"; };
+		245D8916202AE23100926272 /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-Bold.otf"; path = "../../../../assets/SF-Pro-Text-Bold.otf"; sourceTree = "<group>"; };
+		245D8917202AE23100926272 /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-Regular.otf"; path = "../../../../assets/SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
+		245D8918202AE23100926272 /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Display-Bold.otf"; path = "../../../../assets/SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
+		24776875203BE6FC00A4AE13 /* SignitTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignitTabVC.swift; sourceTree = "<group>"; };
+		248036DE204BD5020050EC81 /* OptionWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionWebView.swift; sourceTree = "<group>"; };
+		2484AA1D203E8A0F004D2BFB /* OptionChangeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionChangeProtocol.swift; sourceTree = "<group>"; };
+		249715A1203BE80E00CB84AA /* EditTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTabVC.swift; sourceTree = "<group>"; };
+		249715A3203BF3B600CB84AA /* OptionTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionTabVC.swift; sourceTree = "<group>"; };
+		249715A5203BF41C00CB84AA /* TransformTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformTabVC.swift; sourceTree = "<group>"; };
+		249715AA203BFE1800CB84AA /* CustomTextSizeSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextSizeSlider.swift; sourceTree = "<group>"; };
+		24A1F2F8203ECEEE00800820 /* RotateChangeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotateChangeProtocol.swift; sourceTree = "<group>"; };
+		24A41CBB204D2AB600AF0E94 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
+		24BD7FE72043C49300BC48B5 /* SF-Pro-Text-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-Light.otf"; path = "../../../../../Library/Fonts/SF-Pro-Text-Light.otf"; sourceTree = "<group>"; };
+		24BD7FE92043F23600BC48B5 /* SignitBtnClickProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignitBtnClickProtocol.swift; sourceTree = "<group>"; };
+		24C316FF2058F16A00ECF121 /* DoneProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneProtocol.swift; sourceTree = "<group>"; };
+		24C317012058F87800ECF121 /* BlowVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlowVC.swift; sourceTree = "<group>"; };
+		24C317032058FAC100ECF121 /* CircularTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularTransition.swift; sourceTree = "<group>"; };
+		24DD3353204518D900A799D5 /* CompleteTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteTabVC.swift; sourceTree = "<group>"; };
+		24DD335520451D1800A799D5 /* CompleteClickProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteClickProtocol.swift; sourceTree = "<group>"; };
+		24ED66BF205651C200FCD85B /* DescVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescVC.swift; sourceTree = "<group>"; };
+		24ED66C120565D3500FCD85B /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Display-Regular.otf"; path = "../../../../../Library/Fonts/SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
+		24FB4D58205B964E0046702D /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
+		24FB4D59205B964E0046702D /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = SOURCE_ROOT; };
+		24FB4D5C205B99E20046702D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		30B93AF3C6EA92BF31E47BA8 /* Pods_SignitProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SignitProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB02D5719708CE9EF12EF938 /* Pods-SignitProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignitProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SignitProject/Pods-SignitProject.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		245D88F8202ACA8700926272 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B35A1BFF03B6CEF1FAD4B101 /* Pods_SignitProject.framework in Frameworks */,
+				24FB4D5B205B964E0046702D /* Crashlytics.framework in Frameworks */,
+				24FB4D5A205B964E0046702D /* Fabric.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2411A0082033F49B0050C5C5 /* image */ = {
+			isa = PBXGroup;
+			children = (
+				2411A0092033F4D30050C5C5 /* images.xcassets */,
+			);
+			path = image;
+			sourceTree = "<group>";
+		};
+		245D88F2202ACA8700926272 = {
+			isa = PBXGroup;
+			children = (
+				245D88FD202ACA8700926272 /* SignitProject */,
+				245D88FC202ACA8700926272 /* Products */,
+				3C33824FF2AFDA7F5931B02A /* Pods */,
+				6B6ACAF7FD24D7D1D1C0E9AD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		245D88FC202ACA8700926272 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				245D88FB202ACA8700926272 /* SignitProject.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		245D88FD202ACA8700926272 /* SignitProject */ = {
+			isa = PBXGroup;
+			children = (
+				24FB4D59205B964E0046702D /* Crashlytics.framework */,
+				24FB4D58205B964E0046702D /* Fabric.framework */,
+				248036DD204BD4D50050EC81 /* webviews */,
+				2484AA1C203E89EE004D2BFB /* protocols */,
+				249715A7203BFC5A00CB84AA /* customView */,
+				24DE9B3A203A9426000C6F1F /* mainSubVC */,
+				2411A0082033F49B0050C5C5 /* image */,
+				245D8913202ADFD100926272 /* font */,
+				245D88FE202ACA8700926272 /* AppDelegate.swift */,
+				245D8900202ACA8700926272 /* ViewController.swift */,
+				245D8902202ACA8700926272 /* Main.storyboard */,
+				244EF9CD202C618A00762728 /* PickAndEdit.storyboard */,
+				241BB950202D77F6009CAB94 /* EditViewController.swift */,
+				244EF9CF202C633800762728 /* PickerViewController.swift */,
+				245D8908202ACA8700926272 /* Assets.xcassets */,
+				245D890A202ACA8700926272 /* LaunchScreen.storyboard */,
+				245D890D202ACA8700926272 /* Info.plist */,
+				24FB4D5C205B99E20046702D /* GoogleService-Info.plist */,
+				245D8905202ACA8700926272 /* SignitProject.xcdatamodeld */,
+				243A897C204009C40029A0F3 /* OptionViewController.swift */,
+				24ED66BF205651C200FCD85B /* DescVC.swift */,
+				24C317012058F87800ECF121 /* BlowVC.swift */,
+				24C317032058FAC100ECF121 /* CircularTransition.swift */,
+			);
+			path = SignitProject;
+			sourceTree = "<group>";
+		};
+		245D8913202ADFD100926272 /* font */ = {
+			isa = PBXGroup;
+			children = (
+				24ED66C120565D3500FCD85B /* SF-Pro-Display-Regular.otf */,
+				24BD7FE72043C49300BC48B5 /* SF-Pro-Text-Light.otf */,
+				245D8918202AE23100926272 /* SF-Pro-Display-Bold.otf */,
+				245D8916202AE23100926272 /* SF-Pro-Text-Bold.otf */,
+				245D8917202AE23100926272 /* SF-Pro-Text-Regular.otf */,
+				245D8914202ADFDB00926272 /* desyrel.ttf */,
+			);
+			path = font;
+			sourceTree = "<group>";
+		};
+		248036DD204BD4D50050EC81 /* webviews */ = {
+			isa = PBXGroup;
+			children = (
+				248036DE204BD5020050EC81 /* OptionWebView.swift */,
+			);
+			path = webviews;
+			sourceTree = "<group>";
+		};
+		2484AA1C203E89EE004D2BFB /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				2484AA1D203E8A0F004D2BFB /* OptionChangeProtocol.swift */,
+				24A1F2F8203ECEEE00800820 /* RotateChangeProtocol.swift */,
+				24BD7FE92043F23600BC48B5 /* SignitBtnClickProtocol.swift */,
+				24DD335520451D1800A799D5 /* CompleteClickProtocol.swift */,
+				24C316FF2058F16A00ECF121 /* DoneProtocol.swift */,
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		249715A7203BFC5A00CB84AA /* customView */ = {
+			isa = PBXGroup;
+			children = (
+				249715AA203BFE1800CB84AA /* CustomTextSizeSlider.swift */,
+				24A41CBB204D2AB600AF0E94 /* ToastView.swift */,
+			);
+			path = customView;
+			sourceTree = "<group>";
+		};
+		24DE9B3A203A9426000C6F1F /* mainSubVC */ = {
+			isa = PBXGroup;
+			children = (
+				24776875203BE6FC00A4AE13 /* SignitTabVC.swift */,
+				249715A1203BE80E00CB84AA /* EditTabVC.swift */,
+				249715A3203BF3B600CB84AA /* OptionTabVC.swift */,
+				249715A5203BF41C00CB84AA /* TransformTabVC.swift */,
+				24DD3353204518D900A799D5 /* CompleteTabVC.swift */,
+			);
+			path = mainSubVC;
+			sourceTree = "<group>";
+		};
+		3C33824FF2AFDA7F5931B02A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EB02D5719708CE9EF12EF938 /* Pods-SignitProject.debug.xcconfig */,
+				1624B1AD8C1E58FAA7DF5FB4 /* Pods-SignitProject.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6B6ACAF7FD24D7D1D1C0E9AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				30B93AF3C6EA92BF31E47BA8 /* Pods_SignitProject.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		245D88FA202ACA8700926272 /* SignitProject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 245D8910202ACA8700926272 /* Build configuration list for PBXNativeTarget "SignitProject" */;
+			buildPhases = (
+				96DCAA04C9FC914DE95A0F24 /* [CP] Check Pods Manifest.lock */,
+				245D88F7202ACA8700926272 /* Sources */,
+				245D88F8202ACA8700926272 /* Frameworks */,
+				245D88F9202ACA8700926272 /* Resources */,
+				31D030A5276DA06561A5DFBC /* [CP] Embed Pods Frameworks */,
+				A5AA68DCCA29CB169223612C /* [CP] Copy Pods Resources */,
+				24FB4D57205B95C30046702D /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SignitProject;
+			productName = SignitProject;
+			productReference = 245D88FB202ACA8700926272 /* SignitProject.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		245D88F3202ACA8700926272 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = redish;
+				TargetAttributes = {
+					245D88FA202ACA8700926272 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 245D88F6202ACA8700926272 /* Build configuration list for PBXProject "SignitProject" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 245D88F2202ACA8700926272;
+			productRefGroup = 245D88FC202ACA8700926272 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				245D88FA202ACA8700926272 /* SignitProject */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		245D88F9202ACA8700926272 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				245D891A202AE23100926272 /* SF-Pro-Text-Regular.otf in Resources */,
+				24ED66C220565D3500FCD85B /* SF-Pro-Display-Regular.otf in Resources */,
+				245D890C202ACA8700926272 /* LaunchScreen.storyboard in Resources */,
+				245D8919202AE23100926272 /* SF-Pro-Text-Bold.otf in Resources */,
+				2411A00A2033F4D30050C5C5 /* images.xcassets in Resources */,
+				24FB4D5D205B99E30046702D /* GoogleService-Info.plist in Resources */,
+				24BD7FE82043C49400BC48B5 /* SF-Pro-Text-Light.otf in Resources */,
+				245D8909202ACA8700926272 /* Assets.xcassets in Resources */,
+				245D891B202AE23100926272 /* SF-Pro-Display-Bold.otf in Resources */,
+				244EF9CE202C618A00762728 /* PickAndEdit.storyboard in Resources */,
+				245D8904202ACA8700926272 /* Main.storyboard in Resources */,
+				245D8915202ADFDB00926272 /* desyrel.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		24FB4D57205B95C30046702D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 7cad3c6e3f724cb920ae9a6c574ac9af2aba7dc2 750bd8e2771faf8be2fa54694593aa709a38ccfd252e253c39f22385caba4ce5";
+		};
+		31D030A5276DA06561A5DFBC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SignitProject/Pods-SignitProject-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SignitProject/Pods-SignitProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96DCAA04C9FC914DE95A0F24 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SignitProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5AA68DCCA29CB169223612C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SignitProject/Pods-SignitProject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		245D88F7202ACA8700926272 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24C317022058F87800ECF121 /* BlowVC.swift in Sources */,
+				24C317042058FAC100ECF121 /* CircularTransition.swift in Sources */,
+				248036DF204BD5020050EC81 /* OptionWebView.swift in Sources */,
+				241BB951202D77F6009CAB94 /* EditViewController.swift in Sources */,
+				24BD7FEA2043F23600BC48B5 /* SignitBtnClickProtocol.swift in Sources */,
+				249715A6203BF41C00CB84AA /* TransformTabVC.swift in Sources */,
+				244EF9D0202C633800762728 /* PickerViewController.swift in Sources */,
+				249715AB203BFE1800CB84AA /* CustomTextSizeSlider.swift in Sources */,
+				24A1F2F9203ECEEE00800820 /* RotateChangeProtocol.swift in Sources */,
+				245D8901202ACA8700926272 /* ViewController.swift in Sources */,
+				24DD335620451D1800A799D5 /* CompleteClickProtocol.swift in Sources */,
+				24A41CBC204D2AB600AF0E94 /* ToastView.swift in Sources */,
+				24ED66C0205651C200FCD85B /* DescVC.swift in Sources */,
+				245D88FF202ACA8700926272 /* AppDelegate.swift in Sources */,
+				249715A2203BE80E00CB84AA /* EditTabVC.swift in Sources */,
+				249715A4203BF3B600CB84AA /* OptionTabVC.swift in Sources */,
+				24776876203BE6FC00A4AE13 /* SignitTabVC.swift in Sources */,
+				245D8907202ACA8700926272 /* SignitProject.xcdatamodeld in Sources */,
+				24DD3354204518D900A799D5 /* CompleteTabVC.swift in Sources */,
+				24C317002058F16A00ECF121 /* DoneProtocol.swift in Sources */,
+				243A897D204009C40029A0F3 /* OptionViewController.swift in Sources */,
+				2484AA1E203E8A0F004D2BFB /* OptionChangeProtocol.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		245D8902202ACA8700926272 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				245D8903202ACA8700926272 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		245D890A202ACA8700926272 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				245D890B202ACA8700926272 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		245D890E202ACA8700926272 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		245D890F202ACA8700926272 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		245D8911202ACA8700926272 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB02D5719708CE9EF12EF938 /* Pods-SignitProject.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G4LU7JKFD2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = SignitProject/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kr.redish.SignitProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		245D8912202ACA8700926272 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1624B1AD8C1E58FAA7DF5FB4 /* Pods-SignitProject.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G4LU7JKFD2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = SignitProject/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kr.redish.SignitProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		245D88F6202ACA8700926272 /* Build configuration list for PBXProject "SignitProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				245D890E202ACA8700926272 /* Debug */,
+				245D890F202ACA8700926272 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		245D8910202ACA8700926272 /* Build configuration list for PBXNativeTarget "SignitProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				245D8911202ACA8700926272 /* Debug */,
+				245D8912202ACA8700926272 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		245D8905202ACA8700926272 /* SignitProject.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				245D8906202ACA8700926272 /* SignitProject.xcdatamodel */,
+			);
+			currentVersion = 245D8906202ACA8700926272 /* SignitProject.xcdatamodel */;
+			path = SignitProject.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 245D88F3202ACA8700926272 /* Project object */;
+}
