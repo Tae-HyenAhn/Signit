@@ -28,7 +28,6 @@
 		249715A2203BE80E00CB84AA /* EditTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249715A1203BE80E00CB84AA /* EditTabVC.swift */; };
 		249715A4203BF3B600CB84AA /* OptionTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249715A3203BF3B600CB84AA /* OptionTabVC.swift */; };
 		249715A6203BF41C00CB84AA /* TransformTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249715A5203BF41C00CB84AA /* TransformTabVC.swift */; };
-		249715AB203BFE1800CB84AA /* CustomTextSizeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249715AA203BFE1800CB84AA /* CustomTextSizeSlider.swift */; };
 		24A1F2F9203ECEEE00800820 /* RotateChangeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1F2F8203ECEEE00800820 /* RotateChangeProtocol.swift */; };
 		24A41CBC204D2AB600AF0E94 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A41CBB204D2AB600AF0E94 /* ToastView.swift */; };
 		24BD7FE82043C49400BC48B5 /* SF-Pro-Text-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 24BD7FE72043C49300BC48B5 /* SF-Pro-Text-Light.otf */; };
@@ -71,7 +70,6 @@
 		249715A1203BE80E00CB84AA /* EditTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTabVC.swift; sourceTree = "<group>"; };
 		249715A3203BF3B600CB84AA /* OptionTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionTabVC.swift; sourceTree = "<group>"; };
 		249715A5203BF41C00CB84AA /* TransformTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformTabVC.swift; sourceTree = "<group>"; };
-		249715AA203BFE1800CB84AA /* CustomTextSizeSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextSizeSlider.swift; sourceTree = "<group>"; };
 		24A1F2F8203ECEEE00800820 /* RotateChangeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotateChangeProtocol.swift; sourceTree = "<group>"; };
 		24A41CBB204D2AB600AF0E94 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 		24BD7FE72043C49300BC48B5 /* SF-Pro-Text-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-Light.otf"; path = "../../../../../Library/Fonts/SF-Pro-Text-Light.otf"; sourceTree = "<group>"; };
@@ -196,7 +194,6 @@
 		249715A7203BFC5A00CB84AA /* customView */ = {
 			isa = PBXGroup;
 			children = (
-				249715AA203BFE1800CB84AA /* CustomTextSizeSlider.swift */,
 				24A41CBB204D2AB600AF0E94 /* ToastView.swift */,
 			);
 			path = customView;
@@ -392,7 +389,6 @@
 				24BD7FEA2043F23600BC48B5 /* SignitBtnClickProtocol.swift in Sources */,
 				249715A6203BF41C00CB84AA /* TransformTabVC.swift in Sources */,
 				244EF9D0202C633800762728 /* PickerViewController.swift in Sources */,
-				249715AB203BFE1800CB84AA /* CustomTextSizeSlider.swift in Sources */,
 				24A1F2F9203ECEEE00800820 /* RotateChangeProtocol.swift in Sources */,
 				245D8901202ACA8700926272 /* ViewController.swift in Sources */,
 				24DD335620451D1800A799D5 /* CompleteClickProtocol.swift in Sources */,

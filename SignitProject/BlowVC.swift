@@ -14,7 +14,7 @@ class BlowVC: UIViewController {
     var dismissDataTransferProtocol : DismissDataTransferProtocol!
     var recorder : AVAudioRecorder!
     var levelTimer = Timer()
-    let LEVEL_THRESHOLD : Float = -10.0
+    let LEVEL_THRESHOLD : Float = -10.1
     var centerY : CGFloat!
     var animController : Bool!
     var signedText : String!
@@ -95,7 +95,7 @@ class BlowVC: UIViewController {
         if(isLoud){
             
             if recorder != nil {
-                print(level)
+                
                 if animController == true{
                     animController = false
                     

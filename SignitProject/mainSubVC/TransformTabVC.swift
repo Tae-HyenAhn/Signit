@@ -14,7 +14,7 @@ class TransformTabVC: UIViewController {
     }
     
     @IBAction func leftRotateStart(_ sender: UIButton) {
-        print("down!")
+        
         if rotateChangeProtocol != nil {
             rotateChangeProtocol?.leftRotateClick(isIn: true)
         }

@@ -535,7 +535,7 @@ class EditViewController: UIViewController, UITextFieldDelegate, OptionChangePro
             lineFadeOut()
             
         default:
-            print("default")
+            return
         }
     }
     
@@ -680,7 +680,7 @@ class EditViewController: UIViewController, UITextFieldDelegate, OptionChangePro
     
     @IBAction func textFieldChange(_ sender: UITextField) {
         if sender == self.signTF {
-            print("changed")
+           
             self.signTF.sizeToFit()
             self.checkSignOutside()
         }
@@ -741,14 +741,13 @@ class EditViewController: UIViewController, UITextFieldDelegate, OptionChangePro
     }
     
     @objc func keyboardWillShow(_ sender: Notification) {
-        print("show")
+        
         let userInfo:NSDictionary = sender.userInfo! as NSDictionary
         let keyboardFrame:NSValue = userInfo.value(forKey: UIKeyboardFrameEndUserInfoKey) as! NSValue
         let keyboardRect = keyboardFrame.cgRectValue
         let keyboardHeight = keyboardRect.height
-        print(keyboardHeight)
+        
         let containerBottomY = containerView.center.y + (containerView.frame.height/2)
-        print(containerBottomY)
         
         if(containerBottomY > (self.view.frame.height - keyboardHeight)){
             self.view.frame.origin.y = -(containerBottomY - (self.view.frame.height - keyboardHeight))
@@ -757,7 +756,7 @@ class EditViewController: UIViewController, UITextFieldDelegate, OptionChangePro
     }
     
     @objc func keyboardWillHide(_ sender: Notification) {
-        print("hide")
+        
         self.view.frame.origin.y = 0
     }
     
@@ -1152,7 +1151,7 @@ class EditViewController: UIViewController, UITextFieldDelegate, OptionChangePro
     func initSignTF(){
         
         if let signText = UserDefaults.standard.string(forKey: saveSignTextKey){
-            print(signText)
+            
             signTF.text = signText
         } else {
             if UserDefaults.standard.object(forKey: signIsFirst) == nil {
