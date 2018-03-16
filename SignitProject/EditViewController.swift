@@ -117,10 +117,6 @@ class EditViewController: UIViewController, UITextFieldDelegate, OptionChangePro
         //op
         state = menuState[3]
         
-        signTF.layer.borderWidth = 0.6
-        
-        
-        
         
     }
     
@@ -1030,14 +1026,14 @@ class EditViewController: UIViewController, UITextFieldDelegate, OptionChangePro
         if isIn {
             if let timer = rotateTimer {
                 if !timer.isValid {
-                    rotateTimer = Timer.scheduledTimer(withTimeInterval: 0.02, repeats: true, block: { (t) in
+                    rotateTimer = Timer.scheduledTimer(withTimeInterval: 0.03, repeats: true, block: { (t) in
                         
                         self.signTF.transform = self.signTF.transform.rotated(by: CGFloat.pi/180)
                         
                     })
                 }
             } else {
-                rotateTimer = Timer.scheduledTimer(withTimeInterval: 0.02, repeats: true, block: { (t) in
+                rotateTimer = Timer.scheduledTimer(withTimeInterval: 0.03, repeats: true, block: { (t) in
                    
                     self.signTF.transform = self.signTF.transform.rotated(by: CGFloat.pi/180)
                     
@@ -1056,7 +1052,7 @@ class EditViewController: UIViewController, UITextFieldDelegate, OptionChangePro
         if isIn {
             if let timer = rotateTimer {
                 if !timer.isValid {
-                    rotateTimer = Timer.scheduledTimer(withTimeInterval: 0.02, repeats: true, block: { (t) in
+                    rotateTimer = Timer.scheduledTimer(withTimeInterval: 0.03, repeats: true, block: { (t) in
                         
                         self.signTF.transform = self.signTF.transform.rotated(by: -CGFloat.pi/180)
                         
@@ -1064,7 +1060,7 @@ class EditViewController: UIViewController, UITextFieldDelegate, OptionChangePro
                     })
                 }
             } else {
-                rotateTimer = Timer.scheduledTimer(withTimeInterval: 0.02, repeats: true, block: { (t) in
+                rotateTimer = Timer.scheduledTimer(withTimeInterval: 0.03, repeats: true, block: { (t) in
                     
                     self.signTF.transform = self.signTF.transform.rotated(by: -CGFloat.pi/180)
                    
