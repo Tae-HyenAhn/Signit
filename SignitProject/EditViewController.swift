@@ -697,6 +697,9 @@ class EditViewController: UIViewController, UITextFieldDelegate, OptionChangePro
             UserDefaults.standard.set(true, forKey: signIsFirst)
             UserDefaults.standard.set(signTF.text!, forKey: saveSignTextKey)
             
+            goAlbumBtn.alpha = 1.0
+            goAlbumBtn.isUserInteractionEnabled = true
+            
             editIndicator.alpha = 0.0
             optionIndicator.alpha = 0.0
             translateIndicator.alpha = 0.0
@@ -733,6 +736,8 @@ class EditViewController: UIViewController, UITextFieldDelegate, OptionChangePro
         optionBtn.alpha = 0.4
         translateBtn.alpha = 0.4
         subviewContainer.bringSubview(toFront: mainSignitContainer)
+        goAlbumBtn.alpha = 1.0
+        goAlbumBtn.isUserInteractionEnabled = true
         signTF.sizeToFit()
         if containerProtocol != nil {
             containerProtocol.signitLabelChange(sign: signTF.text!)
@@ -1151,7 +1156,7 @@ class EditViewController: UIViewController, UITextFieldDelegate, OptionChangePro
     func initSignTF(){
         
         if let signText = UserDefaults.standard.string(forKey: saveSignTextKey){
-            
+            print(signText)
             signTF.text = signText
         } else {
             if UserDefaults.standard.object(forKey: signIsFirst) == nil {
