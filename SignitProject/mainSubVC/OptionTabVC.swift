@@ -3,6 +3,7 @@
 import UIKit
 
 class OptionTabVC: UIViewController {
+    
 
     @IBOutlet weak var colorSlider: UISlider!
     @IBOutlet weak var sizeSlider: UISlider!
@@ -32,6 +33,11 @@ class OptionTabVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
     }
     

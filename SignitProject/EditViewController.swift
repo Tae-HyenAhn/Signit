@@ -23,6 +23,7 @@ class EditViewController: UIViewController, UITextFieldDelegate, OptionChangePro
     
     var rotateTimer : Timer?
     
+    
     @IBOutlet weak var goAlbumBtn: UIButton!
     @IBOutlet weak var doneBtnArea: UIView!
     @IBOutlet weak var doneBtnPoint: UIView!
@@ -142,21 +143,7 @@ class EditViewController: UIViewController, UITextFieldDelegate, OptionChangePro
         signTF.sizeToFit()
     }
     
-    func getPixelColor(position: CGPoint, img: UIImage) -> CGFloat{
-        let pixelData = img.cgImage?.dataProvider?.data
-        let data : UnsafePointer<UInt8> = CFDataGetBytePtr(pixelData)
-        
-        let pixelInfo : Int = ((Int(img.size.width) * Int(position.y)) + Int(position.x)) * 4
-        
-        let r = CGFloat(data[pixelInfo]) / CGFloat(255.0)
-        let g = CGFloat(data[pixelInfo+1]) / CGFloat(255.0)
-        let b = CGFloat(data[pixelInfo+2]) / CGFloat(255.0)
-        
-        
-        let av : CGFloat = (r + g + b)/3
-        
-        return av
-    }
+    
     
     @IBAction func signMove(_ sender: UIPanGestureRecognizer) {
         
@@ -211,6 +198,8 @@ class EditViewController: UIViewController, UITextFieldDelegate, OptionChangePro
         if g == .ended {
             editImageView.isUserInteractionEnabled = true
             signTF.layer.borderWidth = 0.0
+            
+            
         }
         
     }
@@ -1256,6 +1245,7 @@ class EditViewController: UIViewController, UITextFieldDelegate, OptionChangePro
     }
 }
 
+
 extension EditViewController: UIDocumentInteractionControllerDelegate {
     func shareOnInstagram(_ photo: UIImage) {
         let instagramUrl = URL(string: "instagram://app")!
@@ -1289,6 +1279,7 @@ extension EditViewController: UIDocumentInteractionControllerDelegate {
         }
     }
 }
+
 
 protocol ContainerProtocol {
     func signitLabelChange(sign : String)
