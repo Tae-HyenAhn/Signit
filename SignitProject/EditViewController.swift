@@ -1145,7 +1145,7 @@ class EditViewController: UIViewController, UITextFieldDelegate, OptionChangePro
     func initSignTF(){
         
         if let signText = UserDefaults.standard.string(forKey: saveSignTextKey){
-            print(signText)
+            
             signTF.text = signText
         } else {
             if UserDefaults.standard.object(forKey: signIsFirst) == nil {
