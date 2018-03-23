@@ -2,17 +2,21 @@
 import UIKit
 import Photos
 import PhotosUI
+import MobileCoreServices
 
 class PickerViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     var allPhotos: PHFetchResult<PHAsset>!
     let imageManager = PHCachingImageManager()
+    let picker = UIImagePickerController()
     
+    @IBOutlet weak var imageStackView: UIStackView!
     @IBOutlet weak var imageGrid: UICollectionView!
     
     @IBOutlet weak var topArea: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         shadowTopArea()
         fetchAllPhotos()
         
@@ -76,11 +80,26 @@ class PickerViewController: UIViewController, UICollectionViewDelegate, UICollec
         
         let allPhotosOptions = PHFetchOptions()
         allPhotosOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
-
+        
         self.allPhotos = PHAsset.fetchAssets(with: .image, options: allPhotosOptions)
-        self.imageGrid?.reloadData()
+        
+        if self.allPhotos.count > 0 {
+            self.view.bringSubview(toFront: imageStackView)
+            self.imageGrid?.reloadData()
+        } else {
+            let initImage: UIImage = UIImage(named: "initImage")!
+            UIImageWriteToSavedPhotosAlbum(initImage, self, #selector(initImageSaveCompleted(_:didFinishSavingWithError:contextInfo:)), nil)
+            
+        }
         
     }
+    
+    @objc func initImageSaveCompleted(_ image: UIImage, didFinishSavingWithError error: NSError?, contextInfo: UnsafeRawPointer) {
+        
+        fetchAllPhotos()
+    
+    }
+    
     
     func shadowTopArea() {
         topArea.layer.masksToBounds = false
@@ -94,8 +113,6 @@ class PickerViewController: UIViewController, UICollectionViewDelegate, UICollec
         if segue.identifier == "toEdit" {
             let editViewController = segue.destination as! EditViewController
             editViewController.Asset = sender as! PHAsset
-        } else if segue.identifier == "toOption" {
-            
         }
     }
     

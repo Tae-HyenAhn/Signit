@@ -5,7 +5,7 @@ class SignitTabVC: UIViewController, ContainerProtocol {
 
     
     @IBOutlet weak var signitBtn: UIButton!
-    @IBOutlet weak var signitLabel: UILabel!
+    @IBOutlet weak var signitBtnLabel: UIButton!
     
     var signitClick : SignitBtnClickProtocol?
     
@@ -23,11 +23,9 @@ class SignitTabVC: UIViewController, ContainerProtocol {
     }
     
     func signitLabelChange(sign: String) {
-        signitLabel.text = sign
-        signitLabel.adjustsFontSizeToFitWidth = true
-        
+    
+        signitBtnLabel.setTitle(sign, for: .normal)
+        signitBtnLabel.titleLabel!.adjustsFontSizeToFitWidth = true
     }
-    
-    
 }
 

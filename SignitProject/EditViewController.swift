@@ -621,6 +621,7 @@ class EditViewController: UIViewController, UITextFieldDelegate, OptionChangePro
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        initContainerView()
         if UserDefaults.standard.object(forKey: signIsFirst) == nil {
             signTF.layer.borderWidth = 0.0
             
@@ -1169,6 +1170,15 @@ class EditViewController: UIViewController, UITextFieldDelegate, OptionChangePro
         }
     }
     
+    func initContainerView(){
+        if UIDevice.current.isiPad == true || UIDevice.current.isiPadPro == true || UIDevice.current.isiPad10dot5 == true {
+            print("ipad")
+            containerView.translatesAutoresizingMaskIntoConstraints = true
+            containerView.frame.size = CGSize(width: UIScreen.main.bounds.width * 0.7, height: UIScreen.main.bounds.width * 0.7)
+            containerView.center.x = UIScreen.main.bounds.width/2
+        }
+    }
+    
     func initEditImageView(originImg : UIImage){
         
         let img = originImg
@@ -1206,7 +1216,7 @@ class EditViewController: UIViewController, UITextFieldDelegate, OptionChangePro
     func drawLines() {
         UIGraphicsBeginImageContext(lineImg.frame.size)
         let ctx = UIGraphicsGetCurrentContext()!
-        ctx.setLineWidth(1.0)
+        ctx.setLineWidth(0.8)
         ctx.setStrokeColor(UIColor(red: 0.75, green: 0.75, blue: 0.75, alpha: 1).cgColor)
         
         ctx.move(to: CGPoint(x: lineImg.frame.width/3, y: 0))
@@ -1280,6 +1290,42 @@ extension EditViewController: UIDocumentInteractionControllerDelegate {
     }
 }
 
+extension UIDevice {
+    public var isiPhoneSE: Bool {
+        if UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.phone && (UIScreen.main.bounds.size.height == 568 || UIScreen.main.bounds.size.width == 320) {
+            return true
+        }
+        return false
+    }
+    public var isiPhonePlus: Bool {
+        if UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.phone && (UIScreen.main.bounds.size.height == 736 || UIScreen.main.bounds.size.width == 414) {
+            return true
+        }
+        return false
+    }
+    
+    
+    public var isiPad: Bool {
+        if UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad && (UIScreen.main.bounds.size.height == 1024 || UIScreen.main.bounds.size.width == 768) {
+            return true
+        }
+        return false
+    }
+    
+    public var isiPad10dot5: Bool {
+        if UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad && (UIScreen.main.bounds.size.height == 1112 || UIScreen.main.bounds.size.width == 834) {
+            return true
+        }
+        return false
+    }
+    
+    public var isiPadPro: Bool {
+        if UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad && (UIScreen.main.bounds.size.height == 1366 || UIScreen.main.bounds.size.width == 1024) {
+            return true
+        }
+        return false
+    }
+}
 
 protocol ContainerProtocol {
     func signitLabelChange(sign : String)
