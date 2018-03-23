@@ -37,7 +37,8 @@ class ViewController: UIViewController, UIPageViewControllerDelegate, UIPageView
     }
     
     func isPermissionAllOk () -> Bool {
-        if AVAudioSession.sharedInstance().recordPermission() == AVAudioSessionRecordPermission.granted && PHPhotoLibrary.authorizationStatus() == PHAuthorizationStatus.authorized {
+       
+        if PHPhotoLibrary.authorizationStatus() == PHAuthorizationStatus.authorized {
             return true
         }
         
@@ -56,10 +57,10 @@ class ViewController: UIViewController, UIPageViewControllerDelegate, UIPageView
             vc = self.storyboard?.instantiateViewController(withIdentifier: "desc2") as! DescVC
         } else {
             vc = self.storyboard?.instantiateViewController(withIdentifier: "desc3") as! DescVC
-
+            /*
             if AVAudioSession.sharedInstance().recordPermission() == AVAudioSessionRecordPermission.granted {
                 vc.micAllowed = true
-            }
+            }*/
             
             if PHPhotoLibrary.authorizationStatus() == PHAuthorizationStatus.authorized {
                vc.photoAllowed = true

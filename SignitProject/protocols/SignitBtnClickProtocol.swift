@@ -6,5 +6,5 @@ import AVFoundation
 
 protocol SignitBtnClickProtocol {
     func signitClick(_ btnUI : UIButton)
-    
+    func signLabelClick()
 }

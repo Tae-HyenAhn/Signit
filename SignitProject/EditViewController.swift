@@ -22,7 +22,8 @@ class EditViewController: UIViewController, UITextFieldDelegate, OptionChangePro
     var count : Int = 0
     
     var rotateTimer : Timer?
-    
+    var coverView : UIView!
+    var isDescriptionOn : Bool! = true
     
     @IBOutlet weak var goAlbumBtn: UIButton!
     @IBOutlet weak var doneBtnArea: UIView!
@@ -35,6 +36,9 @@ class EditViewController: UIViewController, UITextFieldDelegate, OptionChangePro
     @IBOutlet weak var optionBtn: UIButton!
     @IBOutlet weak var translateBtn: UIButton!
     
+    @IBOutlet weak var middleMenuArea: UIView!
+    @IBOutlet weak var topArea: UIView!
+    @IBOutlet weak var autoScaleBtn: UIButton!
     @IBOutlet weak var subviewContainer: UIView!
     
     @IBOutlet weak var completeContainer: UIView!
@@ -51,6 +55,8 @@ class EditViewController: UIViewController, UITextFieldDelegate, OptionChangePro
     @IBOutlet var zoomPinch: UIPinchGestureRecognizer!
     
     
+    
+    
     @IBAction func editTextClick(_ sender: UIButton) {
         // Settings
         signTF.layer.borderWidth = 0.0
@@ -61,7 +67,7 @@ class EditViewController: UIViewController, UITextFieldDelegate, OptionChangePro
         }
         goAlbumBtn.alpha = 0.4
         goAlbumBtn.isUserInteractionEnabled = false
-        subviewContainer.bringSubview(toFront: editContainer)
+        
         editIndicator.alpha = 1.0
         optionIndicator.alpha = 0.0
         translateIndicator.alpha = 0.0
@@ -75,6 +81,31 @@ class EditViewController: UIViewController, UITextFieldDelegate, OptionChangePro
         editable = true
         signTF.becomeFirstResponder()
     }
+    
+    func signLabelClick() {
+        signTF.layer.borderWidth = 0.0
+        if state == menuState[4] {
+            signTF.isUserInteractionEnabled = true
+            editImageView.isUserInteractionEnabled = true
+            containerView.isUserInteractionEnabled = true
+        }
+        goAlbumBtn.alpha = 0.4
+        goAlbumBtn.isUserInteractionEnabled = false
+        
+        editIndicator.alpha = 1.0
+        optionIndicator.alpha = 0.0
+        translateIndicator.alpha = 0.0
+        editBtn.alpha = 1.0
+        optionBtn.alpha = 0.4
+        translateBtn.alpha = 0.4
+        
+        state = menuState[1]
+        
+        //op
+        editable = true
+        signTF.becomeFirstResponder()
+    }
+    
     @IBAction func OptionTextClick(_ sender: UIButton) {
         if state == menuState[4] {
             signTF.isUserInteractionEnabled = true
@@ -123,27 +154,86 @@ class EditViewController: UIViewController, UITextFieldDelegate, OptionChangePro
     
     func doneClicked() {
         if state == menuState[4] {
+            
             signTF.isUserInteractionEnabled = true
             editImageView.isUserInteractionEnabled = true
             containerView.isUserInteractionEnabled = true
+            goAlbumBtn.alpha = 1.0
+            goAlbumBtn.isUserInteractionEnabled = true
+            editIndicator.alpha = 0.0
+            optionIndicator.alpha = 0.0
+            translateIndicator.alpha = 0.0
+            editBtn.alpha = 0.4
+            optionBtn.alpha = 0.4
+            translateBtn.alpha = 0.4
+            view.endEditing(true)
+            signTF.resignFirstResponder()
+            editable = false
+            state = menuState[0]
+            signTF.sizeToFit()
+            mainSignitContainer.transform = CGAffineTransform(translationX: mainSignitContainer.frame.width, y: mainSignitContainer.transform.ty)
+            self.subviewContainer.bringSubview(toFront: self.mainSignitContainer)
+            UIView.animate(withDuration: 0.34, delay: 0.0, options: .curveLinear, animations: {
+                self.mainSignitContainer.transform = CGAffineTransform(translationX: 0, y: self.mainSignitContainer.transform.ty)
+            }, completion: { (true) in
+                self.editBtn.isHidden = false
+                self.optionBtn.isHidden = false
+                self.translateBtn.isHidden = false
+            })
+        } else {
+            goAlbumBtn.alpha = 1.0
+            goAlbumBtn.isUserInteractionEnabled = true
+            editIndicator.alpha = 0.0
+            optionIndicator.alpha = 0.0
+            translateIndicator.alpha = 0.0
+            editBtn.alpha = 0.4
+            optionBtn.alpha = 0.4
+            translateBtn.alpha = 0.4
+            view.endEditing(true)
+            signTF.resignFirstResponder()
+            editable = false
+            subviewContainer.bringSubview(toFront: mainSignitContainer)
+            state = menuState[0]
+            signTF.sizeToFit()
         }
-        goAlbumBtn.alpha = 1.0
-        goAlbumBtn.isUserInteractionEnabled = true
-        editIndicator.alpha = 0.0
-        optionIndicator.alpha = 0.0
-        translateIndicator.alpha = 0.0
-        editBtn.alpha = 0.4
-        optionBtn.alpha = 0.4
-        translateBtn.alpha = 0.4
-        view.endEditing(true)
-        signTF.resignFirstResponder()
-        editable = false
-        subviewContainer.bringSubview(toFront: mainSignitContainer)
-        state = menuState[0]
-        signTF.sizeToFit()
     }
     
-    
+    func makeDescriptionView(){
+        coverView = UIView()
+        coverView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
+        coverView.backgroundColor = UIColor.black
+        coverView.alpha = 0.7
+        coverView.isUserInteractionEnabled = true
+        
+        let des1 : UIImageView = UIImageView()
+        des1.image = UIImage(named: "des1")
+        des1.sizeToFit()
+        coverView.addSubview(des1)
+        des1.center = goAlbumBtn.center
+        
+        let des2 : UIImageView = UIImageView()
+        des2.image = UIImage(named: "des2")
+        des2.sizeToFit()
+        coverView.addSubview(des2)
+        des2.center = autoScaleBtn.center
+        des2.center.y = des2.center.y + topArea.frame.height
+        
+        let des3 : UIImageView = UIImageView()
+        des3.image = UIImage(named: "des3")
+        des3.sizeToFit()
+        coverView.addSubview(des3)
+        des3.center = middleMenuArea.center
+        des3.center.y = des3.center.y + topArea.frame.height + containerView.frame.height
+        
+        let des4 : UIImageView = UIImageView()
+        des4.image = UIImage(named: "des4")
+        des4.sizeToFit()
+        coverView.addSubview(des4)
+        des4.center = subviewContainer.center
+        des4.center.y = des4.center.y + topArea.frame.height + containerView.frame.height
+        self.view.addSubview(coverView)
+        
+    }
     
     @IBAction func signMove(_ sender: UIPanGestureRecognizer) {
         
@@ -621,30 +711,15 @@ class EditViewController: UIViewController, UITextFieldDelegate, OptionChangePro
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initContainerView()
-        if UserDefaults.standard.object(forKey: signIsFirst) == nil {
-            signTF.layer.borderWidth = 0.0
-            
-            goAlbumBtn.alpha = 0.4
-            goAlbumBtn.isUserInteractionEnabled = false
-            subviewContainer.bringSubview(toFront: editContainer)
-            editIndicator.alpha = 1.0
-            optionIndicator.alpha = 0.0
-            translateIndicator.alpha = 0.0
-            editBtn.alpha = 1.0
-            optionBtn.alpha = 0.4
-            translateBtn.alpha = 0.4
-            
-            state = menuState[1]
-            
-            //op
-            editable = true
-            signTF.becomeFirstResponder()
-        }else {
-            state = menuState[0]
+        state = menuState[0]
+        
+        if UserDefaults.standard.object(forKey: "isFirst") == nil {
+            makeDescriptionView()
         }
         
-       
+        
+        initContainerView()
+        
         let img : UIImage = getImageFromAsset(asset: Asset)
         
         initEditImageView(originImg: img)
@@ -656,8 +731,15 @@ class EditViewController: UIViewController, UITextFieldDelegate, OptionChangePro
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: .UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: .UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(changeInputMode(_:)), name: NSNotification.Name.UITextInputCurrentInputModeDidChange, object: nil)
         
     }
+    
+    @objc func changeInputMode(_ notification: NSNotification){
+        let inputMode = signTF.textInputMode?.primaryLanguage
+        print(inputMode)
+    }
+    
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         if textField == self.signTF {
@@ -678,6 +760,17 @@ class EditViewController: UIViewController, UITextFieldDelegate, OptionChangePro
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if isDescriptionOn == true {
+            if UserDefaults.standard.object(forKey: "isFirst") == nil {
+                coverView.removeFromSuperview()
+                UserDefaults.standard.set(false, forKey: "isFirst")
+            }
+            
+            
+            isDescriptionOn = false
+        }
+        
+        
         if(state == menuState[1]){
             if signTF.text == nil || signTF.text == "" {
                 ToastView.shared.showTop(duration: 1.3, self.view, text_msg: "Please sign here.")
@@ -840,6 +933,11 @@ class EditViewController: UIViewController, UITextFieldDelegate, OptionChangePro
             containerView.isUserInteractionEnabled = false
             state = menuState[4]
             editable = false
+            
+            editBtn.isHidden = true
+            optionBtn.isHidden = true
+            translateBtn.isHidden = true
+            
         }
         goAlbumBtn.alpha = 1.0
         goAlbumBtn.isUserInteractionEnabled = true
@@ -1148,15 +1246,16 @@ class EditViewController: UIViewController, UITextFieldDelegate, OptionChangePro
         if let signText = UserDefaults.standard.string(forKey: saveSignTextKey){
             
             signTF.text = signText
+            
         } else {
             if UserDefaults.standard.object(forKey: signIsFirst) == nil {
-                signTF.text = ""
+                signTF.text = "sign here"
             }
             
         }
         
         let sizeScale = containerView.bounds.width / 320.0
-        signTF.font = UIFont(name: (signTF.font?.fontName)!, size: 13.0 * sizeScale)
+        signTF.font = UIFont(name: (signTF.font?.fontName)!, size: 28.0 * sizeScale)
         signTF.sizeToFit()
         if UserDefaults.standard.object(forKey: signIsFirst) == nil {
             signTF.center = CGPoint(x: containerView.frame.width/2, y: containerView.frame.height/2)
@@ -1172,7 +1271,7 @@ class EditViewController: UIViewController, UITextFieldDelegate, OptionChangePro
     
     func initContainerView(){
         if UIDevice.current.isiPad == true || UIDevice.current.isiPadPro == true || UIDevice.current.isiPad10dot5 == true {
-            print("ipad")
+           
             containerView.translatesAutoresizingMaskIntoConstraints = true
             containerView.frame.size = CGSize(width: UIScreen.main.bounds.width * 0.7, height: UIScreen.main.bounds.width * 0.7)
             containerView.center.x = UIScreen.main.bounds.width/2

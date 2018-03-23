@@ -113,6 +113,9 @@ class PickerViewController: UIViewController, UICollectionViewDelegate, UICollec
         if segue.identifier == "toEdit" {
             let editViewController = segue.destination as! EditViewController
             editViewController.Asset = sender as! PHAsset
+        } else if segue.identifier == "toOption" {
+            
+            
         }
     }
     

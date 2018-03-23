@@ -14,10 +14,11 @@ class BlowVC: UIViewController {
     var dismissDataTransferProtocol : DismissDataTransferProtocol!
     var recorder : AVAudioRecorder!
     var levelTimer = Timer()
-    let LEVEL_THRESHOLD : Float = -10.1
+    let LEVEL_THRESHOLD : Float = -0.9
     var centerY : CGFloat!
     var animController : Bool!
     var signedText : String!
+    
     
     @IBAction func skip(_ sender: UIButton) {
         if recorder != nil {
@@ -92,42 +93,31 @@ class BlowVC: UIViewController {
         
         let level = recorder.averagePower(forChannel: 0)
         let isLoud = level > LEVEL_THRESHOLD
+        
         if(isLoud){
             
             if recorder != nil {
-                
+               
                 if animController == true{
                     animController = false
-                    
-                    UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseIn, animations: {
-                        self.blowIndicator.center.y = self.blowIndicator.center.y - self.blowIndicator.bounds.height*0.35
-                        self.signedLabel.alpha = self.signedLabel.alpha + 0.31
+                 
+                    UIView.animate(withDuration: 1.0, delay: 0.0, options: .curveEaseOut, animations: {
+                        self.blowIndicator.center.y = -self.blowIndicator.frame.size.height + 10
+                        self.blowIndicator.alpha = 1.0
+                        self.signedLabel.alpha = 1.0
                     }, completion: { (true) in
-                        UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseIn, animations: {
-                            self.blowIndicator.center.y = self.centerY
-                            self.signedLabel.alpha = self.signedLabel.alpha - 0.1
-                        }, completion: { (complete) in
-                            self.centerY = self.centerY - self.blowIndicator.bounds.height*0.25
-                            self.animController = true
-                            print(self.signedLabel.alpha)
-                            if self.signedLabel.alpha >= 1.0 {
-                                
-                                if self.recorder != nil {
-                                    self.recorder.stop()
-                                }
-                                
-                                if self.dismissDataTransferProtocol != nil {
-                                    self.dismissDataTransferProtocol.dismissed(type: true)
-                                }
-                                self.dismiss(animated: true, completion: nil)
-                                
-                            }
-                            
-                        })
+                        self.blowIndicator.isHidden = true
+                        if self.recorder != nil {
+                            self.recorder.stop()
+                        }
+                        
+                        if self.dismissDataTransferProtocol != nil {
+                            self.dismissDataTransferProtocol.dismissed(type: true)
+                        }
+                        self.dismiss(animated: true, completion: nil)
                     })
-                  
+                    
                 }
-                
             }
             
         }

@@ -180,46 +180,8 @@ Your signed-photo</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="94s-kC-jbn">
-                                <rect key="frame" x="80" y="268" width="164" height="28"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JYY-kq-fFm">
-                                        <rect key="frame" x="0.0" y="6" width="16" height="16"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="16" id="m9K-Kw-mIe"/>
-                                            <constraint firstAttribute="width" constant="16" id="mhj-xW-vLz"/>
-                                        </constraints>
-                                        <state key="normal" image="d3btn"/>
-                                        <connections>
-                                            <action selector="micBtnClick:" destination="Qru-Vd-P3h" eventType="touchUpInside" id="Bfn-ct-v3s"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38y-w8-uba">
-                                        <rect key="frame" x="27" y="0.0" width="137" height="28"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="137" id="OtI-1K-XNd"/>
-                                            <constraint firstAttribute="height" constant="28" id="UTM-aE-5Mt"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Desyrel" family="Desyrel" pointSize="23"/>
-                                        <state key="normal" title="Microphone">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="micTextBtnClick:" destination="Qru-Vd-P3h" eventType="touchUpInside" id="h2h-OA-Ubt"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="28" id="0ot-FT-vd1"/>
-                                    <constraint firstItem="JYY-kq-fFm" firstAttribute="centerY" secondItem="94s-kC-jbn" secondAttribute="centerY" id="5Cj-sT-aAs"/>
-                                    <constraint firstItem="JYY-kq-fFm" firstAttribute="leading" secondItem="94s-kC-jbn" secondAttribute="leading" id="FoQ-Gg-gRK"/>
-                                    <constraint firstItem="38y-w8-uba" firstAttribute="centerY" secondItem="94s-kC-jbn" secondAttribute="centerY" id="MTA-70-yxv"/>
-                                    <constraint firstItem="38y-w8-uba" firstAttribute="leading" secondItem="JYY-kq-fFm" secondAttribute="trailing" constant="11" id="OmF-DX-rmZ"/>
-                                    <constraint firstAttribute="width" constant="164" id="gaI-pk-AeM"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tLW-48-sux">
-                                <rect key="frame" x="80" y="224" width="164" height="28"/>
+                                <rect key="frame" x="80" y="270" width="164" height="28"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xbh-C6-upB">
                                         <rect key="frame" x="0.0" y="3" width="16" height="22"/>
@@ -280,17 +242,14 @@ permission to user.</string>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="94s-kC-jbn" firstAttribute="centerY" secondItem="Aoa-gR-Gkk" secondAttribute="centerY" constant="-2" id="QXl-mj-cKc"/>
-                            <constraint firstItem="94s-kC-jbn" firstAttribute="top" secondItem="tLW-48-sux" secondAttribute="bottom" constant="16" id="Td0-tR-s45"/>
                             <constraint firstItem="tLW-48-sux" firstAttribute="centerX" secondItem="Aoa-gR-Gkk" secondAttribute="centerX" constant="2" id="Vm8-Xv-sot"/>
+                            <constraint firstItem="tLW-48-sux" firstAttribute="centerY" secondItem="Aoa-gR-Gkk" secondAttribute="centerY" id="Xn3-iw-3Po"/>
                             <constraint firstItem="lXv-tn-fOz" firstAttribute="bottom" secondItem="l3R-pe-EXE" secondAttribute="bottom" constant="72" id="gGf-uH-rYS"/>
-                            <constraint firstItem="94s-kC-jbn" firstAttribute="centerX" secondItem="Aoa-gR-Gkk" secondAttribute="centerX" constant="2" id="jpY-xk-oFC"/>
                             <constraint firstItem="l3R-pe-EXE" firstAttribute="centerX" secondItem="Aoa-gR-Gkk" secondAttribute="centerX" id="njM-Jf-bbi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lXv-tn-fOz"/>
                     </view>
                     <connections>
-                        <outlet property="micCheckbox" destination="JYY-kq-fFm" id="Kim-UA-1jA"/>
                         <outlet property="photoCheckbox" destination="xbh-C6-upB" id="Nts-Aa-MSI"/>
                     </connections>
                 </viewController>

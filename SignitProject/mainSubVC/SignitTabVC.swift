@@ -17,6 +17,12 @@ class SignitTabVC: UIViewController, ContainerProtocol {
         }
     }
     
+    @IBAction func signLabelClick(_ sender: UIButton) {
+        if signitClick != nil {
+            signitClick?.signLabelClick()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
