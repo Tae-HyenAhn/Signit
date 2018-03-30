@@ -14,10 +14,11 @@ class BlowVC: UIViewController {
     var dismissDataTransferProtocol : DismissDataTransferProtocol!
     var recorder : AVAudioRecorder!
     var levelTimer = Timer()
-    let LEVEL_THRESHOLD : Float = -0.9
+    let LEVEL_THRESHOLD : Float = -5.0
     var centerY : CGFloat!
     var animController : Bool!
     var signedText : String!
+    var signedFontName: String!
     
     
     @IBAction func skip(_ sender: UIButton) {
@@ -57,6 +58,7 @@ class BlowVC: UIViewController {
         
         signedLabel.text = signedText
         signedLabel.adjustsFontSizeToFitWidth = true
+        signedLabel.font = UIFont(name: signedFontName, size: signedLabel.font.pointSize)
         centerY = blowIndicator.center.y - self.blowIndicator.bounds.height*0.25
         animController = true
         let documents = URL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0])
@@ -93,7 +95,6 @@ class BlowVC: UIViewController {
         
         let level = recorder.averagePower(forChannel: 0)
         let isLoud = level > LEVEL_THRESHOLD
-        
         if(isLoud){
             
             if recorder != nil {

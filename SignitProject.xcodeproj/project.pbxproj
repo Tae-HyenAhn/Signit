@@ -10,6 +10,10 @@
 		2411A00A2033F4D30050C5C5 /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2411A0092033F4D30050C5C5 /* images.xcassets */; };
 		241BB951202D77F6009CAB94 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241BB950202D77F6009CAB94 /* EditViewController.swift */; };
 		243A897D204009C40029A0F3 /* OptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243A897C204009C40029A0F3 /* OptionViewController.swift */; };
+		244A36D3206A8A4B00E55BF5 /* Graceful.otf in Resources */ = {isa = PBXBuildFile; fileRef = 244A36D2206A8A4A00E55BF5 /* Graceful.otf */; };
+		244A36D5206A8A8B00E55BF5 /* yamafont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 244A36D4206A8A8A00E55BF5 /* yamafont.ttf */; };
+		244A36D7206A8AD600E55BF5 /* SDMiSaeng.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 244A36D6206A8AD500E55BF5 /* SDMiSaeng.ttf */; };
+		244A36D9206A8B6400E55BF5 /* DFYun.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 244A36D8206A8B6300E55BF5 /* DFYun.ttc */; };
 		244EF9CE202C618A00762728 /* PickAndEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 244EF9CD202C618A00762728 /* PickAndEdit.storyboard */; };
 		244EF9D0202C633800762728 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244EF9CF202C633800762728 /* PickerViewController.swift */; };
 		245D88FF202ACA8700926272 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245D88FE202ACA8700926272 /* AppDelegate.swift */; };
@@ -50,6 +54,10 @@
 		2411A0092033F4D30050C5C5 /* images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = images.xcassets; sourceTree = "<group>"; };
 		241BB950202D77F6009CAB94 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		243A897C204009C40029A0F3 /* OptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionViewController.swift; sourceTree = "<group>"; };
+		244A36D2206A8A4A00E55BF5 /* Graceful.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Graceful.otf; path = "../../../../chinesefontdesign.com-2017-12-30_04-15-18_981472/Graceful.otf"; sourceTree = "<group>"; };
+		244A36D4206A8A8A00E55BF5 /* yamafont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = yamafont.ttf; path = ../../../../../Downloads/yamafont.ttf; sourceTree = "<group>"; };
+		244A36D6206A8AD500E55BF5 /* SDMiSaeng.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = SDMiSaeng.ttf; path = ../../../../SDMiSaeng.ttf; sourceTree = "<group>"; };
+		244A36D8206A8B6300E55BF5 /* DFYun.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; name = DFYun.ttc; path = ../../../../../Downloads/DFYun.ttc; sourceTree = "<group>"; };
 		244EF9CD202C618A00762728 /* PickAndEdit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PickAndEdit.storyboard; sourceTree = "<group>"; };
 		244EF9CF202C633800762728 /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		245D88FB202ACA8700926272 /* SignitProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignitProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -161,8 +169,12 @@
 		245D8913202ADFD100926272 /* font */ = {
 			isa = PBXGroup;
 			children = (
+				244A36D6206A8AD500E55BF5 /* SDMiSaeng.ttf */,
+				244A36D4206A8A8A00E55BF5 /* yamafont.ttf */,
+				244A36D2206A8A4A00E55BF5 /* Graceful.otf */,
 				24ED66C120565D3500FCD85B /* SF-Pro-Display-Regular.otf */,
 				24BD7FE72043C49300BC48B5 /* SF-Pro-Text-Light.otf */,
+				244A36D8206A8B6300E55BF5 /* DFYun.ttc */,
 				245D8918202AE23100926272 /* SF-Pro-Display-Bold.otf */,
 				245D8916202AE23100926272 /* SF-Pro-Text-Bold.otf */,
 				245D8917202AE23100926272 /* SF-Pro-Text-Regular.otf */,
@@ -295,10 +307,14 @@
 				24ED66C220565D3500FCD85B /* SF-Pro-Display-Regular.otf in Resources */,
 				245D890C202ACA8700926272 /* LaunchScreen.storyboard in Resources */,
 				245D8919202AE23100926272 /* SF-Pro-Text-Bold.otf in Resources */,
+				244A36D7206A8AD600E55BF5 /* SDMiSaeng.ttf in Resources */,
 				2411A00A2033F4D30050C5C5 /* images.xcassets in Resources */,
+				244A36D3206A8A4B00E55BF5 /* Graceful.otf in Resources */,
 				24FB4D5D205B99E30046702D /* GoogleService-Info.plist in Resources */,
+				244A36D9206A8B6400E55BF5 /* DFYun.ttc in Resources */,
 				24BD7FE82043C49400BC48B5 /* SF-Pro-Text-Light.otf in Resources */,
 				245D8909202ACA8700926272 /* Assets.xcassets in Resources */,
+				244A36D5206A8A8B00E55BF5 /* yamafont.ttf in Resources */,
 				245D891B202AE23100926272 /* SF-Pro-Display-Bold.otf in Resources */,
 				244EF9CE202C618A00762728 /* PickAndEdit.storyboard in Resources */,
 				245D8904202ACA8700926272 /* Main.storyboard in Resources */,

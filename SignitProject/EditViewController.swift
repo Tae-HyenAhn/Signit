@@ -10,6 +10,7 @@ class EditViewController: UIViewController, UITextFieldDelegate, OptionChangePro
     
     var containerProtocol : ContainerProtocol!
     let saveSignTextKey = "SIGN_TEXT"
+    let saveSignFontName = "SIGN_FONT_NAME"
     let saveSignSizeKey = "SIGN_SIZE"
     let signCompleteCountKey = "SIGN_COUNT"
     let signIsFirst = "SIGN_FIRST"
@@ -24,6 +25,7 @@ class EditViewController: UIViewController, UITextFieldDelegate, OptionChangePro
     var rotateTimer : Timer?
     var coverView : UIView!
     var isDescriptionOn : Bool! = true
+    var preLabelCount : Int! = 0
     
     @IBOutlet weak var goAlbumBtn: UIButton!
     @IBOutlet weak var doneBtnArea: UIView!
@@ -199,39 +201,100 @@ class EditViewController: UIViewController, UITextFieldDelegate, OptionChangePro
     }
     
     func makeDescriptionView(){
-        coverView = UIView()
-        coverView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
-        coverView.backgroundColor = UIColor.black
-        coverView.alpha = 0.7
-        coverView.isUserInteractionEnabled = true
+        if UIDevice.current.isiPad == true || UIDevice.current.isiPadPro == true || UIDevice.current.isiPad10dot5 == true {
+            
+            coverView = UIView()
+            coverView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
+            coverView.backgroundColor = UIColor.black
+            coverView.alpha = 0.7
+            coverView.isUserInteractionEnabled = true
+            
+            let des1 : UIImageView = UIImageView()
+            des1.image = UIImage(named: "des1")
+            des1.sizeToFit()
+            coverView.addSubview(des1)
+            des1.center = goAlbumBtn.center
+            
+            let des3 : UIImageView = UIImageView()
+            des3.image = UIImage(named: "des3")
+            des3.sizeToFit()
+            coverView.addSubview(des3)
+            des3.center = middleMenuArea.center
+            des3.center.y = des3.center.y + topArea.frame.height + containerView.frame.height
+            self.view.addSubview(coverView)
+            
+        } else if self.isiPhoneXScreen() {
+            coverView = UIView()
+            coverView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
+            coverView.backgroundColor = UIColor.black
+            coverView.alpha = 0.7
+            coverView.isUserInteractionEnabled = true
+            
+            let des1 : UIImageView = UIImageView()
+            des1.image = UIImage(named: "des1")
+            des1.sizeToFit()
+            coverView.addSubview(des1)
+            des1.center = goAlbumBtn.center
+            des1.center.y = des1.center.y + 44
+            
+            let des2 : UIImageView = UIImageView()
+            des2.image = UIImage(named: "des2")
+            des2.sizeToFit()
+            coverView.addSubview(des2)
+            des2.center = autoScaleBtn.center
+            des2.center.y = des2.center.y + topArea.frame.height + 44
+            
+            let des3 : UIImageView = UIImageView()
+            des3.image = UIImage(named: "des3")
+            des3.sizeToFit()
+            coverView.addSubview(des3)
+            des3.center = middleMenuArea.center
+            des3.center.y = des3.center.y + topArea.frame.height + containerView.frame.height + 44
+            
+            let des4 : UIImageView = UIImageView()
+            des4.image = UIImage(named: "des4")
+            des4.sizeToFit()
+            coverView.addSubview(des4)
+            des4.center = subviewContainer.center
+            des4.center.y = des4.center.y + topArea.frame.height + containerView.frame.height + 44
+            self.view.addSubview(coverView)
+        } else {
+            coverView = UIView()
+            coverView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
+            coverView.backgroundColor = UIColor.black
+            coverView.alpha = 0.7
+            coverView.isUserInteractionEnabled = true
+            
+            let des1 : UIImageView = UIImageView()
+            des1.image = UIImage(named: "des1")
+            des1.sizeToFit()
+            coverView.addSubview(des1)
+            des1.center = goAlbumBtn.center
+            
+            let des2 : UIImageView = UIImageView()
+            des2.image = UIImage(named: "des2")
+            des2.sizeToFit()
+            coverView.addSubview(des2)
+            des2.center = autoScaleBtn.center
+            des2.center.y = des2.center.y + topArea.frame.height
+            
+            let des3 : UIImageView = UIImageView()
+            des3.image = UIImage(named: "des3")
+            des3.sizeToFit()
+            coverView.addSubview(des3)
+            des3.center = middleMenuArea.center
+            des3.center.y = des3.center.y + topArea.frame.height + containerView.frame.height
+            
+            let des4 : UIImageView = UIImageView()
+            des4.image = UIImage(named: "des4")
+            des4.sizeToFit()
+            coverView.addSubview(des4)
+            des4.center = subviewContainer.center
+            des4.center.y = des4.center.y + topArea.frame.height + containerView.frame.height
+            self.view.addSubview(coverView)
+        }
         
-        let des1 : UIImageView = UIImageView()
-        des1.image = UIImage(named: "des1")
-        des1.sizeToFit()
-        coverView.addSubview(des1)
-        des1.center = goAlbumBtn.center
         
-        let des2 : UIImageView = UIImageView()
-        des2.image = UIImage(named: "des2")
-        des2.sizeToFit()
-        coverView.addSubview(des2)
-        des2.center = autoScaleBtn.center
-        des2.center.y = des2.center.y + topArea.frame.height
-        
-        let des3 : UIImageView = UIImageView()
-        des3.image = UIImage(named: "des3")
-        des3.sizeToFit()
-        coverView.addSubview(des3)
-        des3.center = middleMenuArea.center
-        des3.center.y = des3.center.y + topArea.frame.height + containerView.frame.height
-        
-        let des4 : UIImageView = UIImageView()
-        des4.image = UIImage(named: "des4")
-        des4.sizeToFit()
-        coverView.addSubview(des4)
-        des4.center = subviewContainer.center
-        des4.center.y = des4.center.y + topArea.frame.height + containerView.frame.height
-        self.view.addSubview(coverView)
         
     }
     
@@ -713,12 +776,12 @@ class EditViewController: UIViewController, UITextFieldDelegate, OptionChangePro
         super.viewDidLoad()
         state = menuState[0]
         
+        initContainerView()
         if UserDefaults.standard.object(forKey: "isFirst") == nil {
             makeDescriptionView()
         }
         
         
-        initContainerView()
         
         let img : UIImage = getImageFromAsset(asset: Asset)
         
@@ -731,15 +794,11 @@ class EditViewController: UIViewController, UITextFieldDelegate, OptionChangePro
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: .UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: .UIKeyboardWillHide, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(changeInputMode(_:)), name: NSNotification.Name.UITextInputCurrentInputModeDidChange, object: nil)
+        
         
     }
     
-    @objc func changeInputMode(_ notification: NSNotification){
-        let inputMode = signTF.textInputMode?.primaryLanguage
-        print(inputMode)
-    }
-    
+
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         if textField == self.signTF {
@@ -755,6 +814,52 @@ class EditViewController: UIViewController, UITextFieldDelegate, OptionChangePro
            
             self.signTF.sizeToFit()
             self.checkSignOutside()
+            
+            
+            if let nowText = sender.text {
+                if preLabelCount < nowText.count {
+                    if let lang : String = sender.textInputMode?.primaryLanguage {
+                        
+                        if lang == "ko-KR" {
+                            //SDMiSaeng.ttf
+                            let font = UIFont(name: "Sandoll MiSaeng", size: (signTF.font?.pointSize)!)
+                            signTF.font = font
+                            
+                            preLabelCount = sender.text?.count
+                            return
+                        }else if lang == "ja-JP" {
+                            //yamafont.ttf
+                            let font = UIFont(name: "yamafont", size: (signTF.font?.pointSize)!)
+                            signTF.font = font
+                            preLabelCount = sender.text?.count
+                            return
+                        }else if lang == "zh-Hans" {
+                            //간체 Graceful.otf
+                            let font = UIFont(name: "ZoomlaWuanYue-A017", size: (signTF.font?.pointSize)!)
+                            signTF.font = font
+                            preLabelCount = sender.text?.count
+                            return
+                        }else if lang == "zh-Hant" {
+                            //번체 DFYun.ttc
+                            let font = UIFont(name: "DFYunW3-B5", size: (signTF.font?.pointSize)!)
+                            signTF.font = font
+                            preLabelCount = sender.text?.count
+                            return
+                        } else {
+                            if nowText.count <= 1 {
+                                let font = UIFont(name: "Desyrel", size: (signTF.font?.pointSize)!)
+                                signTF.font = font
+                                preLabelCount = sender.text?.count
+                                return
+                            }
+                        }
+                        
+                    }
+                }
+            }
+            
+            preLabelCount = sender.text?.count
+            
         }
         
     }
@@ -762,7 +867,9 @@ class EditViewController: UIViewController, UITextFieldDelegate, OptionChangePro
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if isDescriptionOn == true {
             if UserDefaults.standard.object(forKey: "isFirst") == nil {
+                
                 coverView.removeFromSuperview()
+                
                 UserDefaults.standard.set(false, forKey: "isFirst")
             }
             
@@ -776,10 +883,10 @@ class EditViewController: UIViewController, UITextFieldDelegate, OptionChangePro
                 ToastView.shared.showTop(duration: 1.3, self.view, text_msg: "Please sign here.")
                 return
             }
-   
+            
             UserDefaults.standard.set(true, forKey: signIsFirst)
             UserDefaults.standard.set(signTF.text!, forKey: saveSignTextKey)
-            
+            UserDefaults.standard.set(signTF.font?.fontName, forKey: saveSignFontName)
             goAlbumBtn.alpha = 1.0
             goAlbumBtn.isUserInteractionEnabled = true
             
@@ -796,8 +903,9 @@ class EditViewController: UIViewController, UITextFieldDelegate, OptionChangePro
             state = menuState[0]
             signTF.sizeToFit()
             if containerProtocol != nil {
-                containerProtocol.signitLabelChange(sign: signTF.text!)
+                containerProtocol.signitLabelChange(sign: signTF.text!, fontName: (signTF.font?.fontName)!)
             }
+            
         }
     }
     
@@ -809,6 +917,7 @@ class EditViewController: UIViewController, UITextFieldDelegate, OptionChangePro
         
         UserDefaults.standard.set(true, forKey: signIsFirst)
         UserDefaults.standard.set(signTF.text!, forKey: saveSignTextKey)
+        UserDefaults.standard.set(signTF.font?.fontName, forKey: saveSignFontName)
         state = menuState[0]
         signTF.resignFirstResponder()
         editable = false
@@ -823,7 +932,7 @@ class EditViewController: UIViewController, UITextFieldDelegate, OptionChangePro
         goAlbumBtn.isUserInteractionEnabled = true
         signTF.sizeToFit()
         if containerProtocol != nil {
-            containerProtocol.signitLabelChange(sign: signTF.text!)
+            containerProtocol.signitLabelChange(sign: signTF.text!, fontName: (signTF.font?.fontName)!)
         }
         return true
     }
@@ -886,6 +995,7 @@ class EditViewController: UIViewController, UITextFieldDelegate, OptionChangePro
             view!.dismissDataTransferProtocol = self
             view!.modalPresentationStyle = .custom
             view!.signedText = signTF.text
+            view!.signedFontName = signTF.font?.fontName
         }
     }
     
@@ -1255,7 +1365,12 @@ class EditViewController: UIViewController, UITextFieldDelegate, OptionChangePro
         }
         
         let sizeScale = containerView.bounds.width / 320.0
-        signTF.font = UIFont(name: (signTF.font?.fontName)!, size: 28.0 * sizeScale)
+        if let signFont = UserDefaults.standard.string(forKey: saveSignFontName) {
+            signTF.font = UIFont(name: signFont, size: 28.0 * sizeScale)
+        }else {
+            signTF.font = UIFont(name: (signTF.font?.fontName)!, size: 28.0 * sizeScale)
+        }
+        
         signTF.sizeToFit()
         if UserDefaults.standard.object(forKey: signIsFirst) == nil {
             signTF.center = CGPoint(x: containerView.frame.width/2, y: containerView.frame.height/2)
@@ -1265,7 +1380,7 @@ class EditViewController: UIViewController, UITextFieldDelegate, OptionChangePro
         
         
         if containerProtocol != nil {
-            containerProtocol.signitLabelChange(sign: signTF.text!)
+            containerProtocol.signitLabelChange(sign: signTF.text!, fontName: (signTF.font?.fontName)!)
         }
     }
     
@@ -1427,5 +1542,5 @@ extension UIDevice {
 }
 
 protocol ContainerProtocol {
-    func signitLabelChange(sign : String)
+    func signitLabelChange(sign : String, fontName : String)
 }

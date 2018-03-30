@@ -28,10 +28,12 @@ class SignitTabVC: UIViewController, ContainerProtocol {
         
     }
     
-    func signitLabelChange(sign: String) {
     
+    func signitLabelChange(sign: String, fontName: String) {
+        print(fontName)
         signitBtnLabel.setTitle(sign, for: .normal)
         signitBtnLabel.titleLabel!.adjustsFontSizeToFitWidth = true
+        signitBtnLabel.titleLabel!.font = UIFont(name: fontName, size: signitBtnLabel.titleLabel!.font.pointSize)
     }
 }
 

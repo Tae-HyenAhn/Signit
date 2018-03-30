@@ -17,9 +17,9 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.00</string>
 	<key>CFBundleVersion</key>
-	<string>2</string>
+	<string>4</string>
 	<key>Fabric</key>
 	<dict>
 		<key>APIKey</key>
@@ -49,6 +49,14 @@
 	<string>Signit needs using mic to complete signing process.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Signit needs photo library access to edit your photo.</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>DFYun.ttc</string>
+		<string>yamafont.ttf</string>
+		<string>SDMiSaeng.ttf</string>
+		<string>Graceful.otf</string>
+		<string>desyrel.ttf</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -70,9 +78,6 @@
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationPortraitUpsideDown</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 </dict>
 </plist>
